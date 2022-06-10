@@ -1,0 +1,9 @@
+{% if meeting_list%}
+    <ul>
+    {% for meeting in meeting_list%}
+        <li><a href="{% url 'home:meetings' meeting.id %}"> {{ meeting.meeting_name }}</a><li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p> No Meetings available </p>
+{% endif %}
